@@ -1,0 +1,39 @@
+users:
+    evanza:
+        email: evanza@sija-dev.com
+        password: P@ssw0rd20
+    hanif:
+        email: hanif@sija-dev.com
+        password: P@ssw0rd22
+    yanuar:
+        email: yanuar@sija-dev.com
+        password: P@ssw0rd23
+    arizal:
+        email: arizal@sija-dev.com
+        password: P@ssw0rd24
+
+orgs:
+    Prakerin:
+        teams:
+            Maintainers:
+                permission: admin
+                members:
+                    - yanuar
+            Developers:
+                permission: write
+                members:
+                    - evanza
+        repos:
+            cms-ecommerce:
+                private: false
+                code: repositories/cms-ecommerce
+                teams:
+                    - Maintainers
+                    - Developers
+
+            interface-ecommerce:
+                private: false
+                code: repositories/interface-ecommerce
+                teams:
+                    - Developers
+            

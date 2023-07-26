@@ -1,0 +1,21 @@
+version: "3.8"
+
+networks:
+  gitea:
+    external: false
+
+services:
+  gitea:
+    image: kevinmz/gitea:latest
+    build:
+      context: ./
+    container_name: gitea
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    networks:
+      - gitea
+    ports:
+      - "3000:3000"
+      - "222:22"
